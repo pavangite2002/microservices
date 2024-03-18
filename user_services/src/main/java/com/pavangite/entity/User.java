@@ -5,7 +5,7 @@ import java.util.List;
 
 public class User {
 
-    private long userId;
+    private Long userId;
     private String name;
     private String phone;
     List<Contact> contact = new ArrayList<>();
@@ -13,24 +13,24 @@ public class User {
     public User() {
     }
 
-    public User(long userId, String name, String phone) {
+    public User(Long userId, String name, String phone) {
         this.userId = userId;
         this.name = name;
         this.phone = phone;
     }
 
-    public User(long userId, String name, String phone, List<Contact> contact) {
+    public User(Long userId, String name, String phone, List<Contact> contact) {
         this.userId = userId;
         this.name = name;
         this.phone = phone;
         this.contact = contact;
     }
 
-    public long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

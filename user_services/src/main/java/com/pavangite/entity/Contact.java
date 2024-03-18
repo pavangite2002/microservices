@@ -2,26 +2,26 @@ package com.pavangite.entity;
 
 public class Contact {
 
-    private long contactId;
+    private Long contactId;
     private String email;
     private String contactName;
-    private long userId;
+    private Long userId;
 
     public Contact() {
     }
 
-    public Contact(long contactId, String email, String contactName, long userId) {
+    public Contact(Long contactId, String email, String contactName, Long userId) {
         this.contactId = contactId;
         this.email = email;
         this.contactName = contactName;
         this.userId = userId;
     }
 
-    public long getContactId() {
+    public Long getContactId() {
         return contactId;
     }
 
-    public void setContactId(long contactId) {
+    public void setContactId(Long contactId) {
         this.contactId = contactId;
     }
 
@@ -41,11 +41,11 @@ public class Contact {
         this.contactName = contactName;
     }
 
-    public long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 }
