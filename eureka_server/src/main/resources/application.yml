@@ -1,4 +1,12 @@
 server:
-  port: 8761
+  port: 8769
 
-
+# tells that don't register yourself unless I tell you to do so
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+  instance:
+    hostname: localhost

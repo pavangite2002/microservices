@@ -33,9 +33,13 @@ public class UserController {
         // http://localhost:9002/contact/user/14
 //        List contacts = restTemplate.getForObject("http://localhost:9002/contact/user/14", List.class);  // this will be static only for userId=14
        // List contacts = restTemplate.getForObject("http://localhost:9002/contact/user/"+userId, List.class);  // this will be Dynamic for userId passed in request Or
-        List contacts = restTemplate.getForObject("http://localhost:9002/contact/user/"+users.getUserId(), List.class);  // this will be Dynamic for userId passed in request
+    //    List contacts = restTemplate.getForObject("http://localhost:9002/contact/user/"+users.getUserId(), List.class);  // this will be Dynamic for userId passed in request
             // One more DisAdvantage is that this is an HardCoded as it will only work for localhost:9002
             // if we have request from diff port it will fail we can overcome this by using Eureka Server
+    //**** After making Custom instances we can give our own name instead of localhost and port address
+
+        List contacts = restTemplate.getForObject("http://contact-service/contact/user/"+users.getUserId(), List.class);  // this will be Dynamic for userId passed in request
+
         users.setContact(contacts);
         return users;
     }
