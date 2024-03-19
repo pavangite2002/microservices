@@ -1,7 +1,12 @@
 server:
   port: 9002
 
+spring:
+  application:
+    name: contact-service
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8769/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
