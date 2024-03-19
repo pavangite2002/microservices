@@ -1,21 +1,37 @@
 server:
   port: 9001
 
-# to give custom name to instances
-#spring:
-#  application:
-#    name: user
-
+spring:
+  application:
+    name: user-service
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8769/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
 
-# if you want instance should be configured with custom port
+
+
+#server:
+#  port: 9001
+#
+## to give custom name to instances
+#spring:
+#  application:
+#    name: user-services
+#
+#
 #eureka:
 #  client:
 #    service-url:
 #      defaultZone: http://localhost:8769/eureka/
-#  instance:
-#    instance-id: ${spring.application.name}:${server.port}
+#
+## if you want instance should be configured with custom port
+##eureka:
+##  client:
+##    service-url:
+##      defaultZone: http://localhost:8769/eureka/
+##  instance:
+##    instance-id: ${spring.application.name}:${server.port}
